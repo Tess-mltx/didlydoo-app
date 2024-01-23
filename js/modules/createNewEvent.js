@@ -41,9 +41,8 @@ async function postNewEvent() {
 
 
 }
-postNewEvent()
 
-async function getEvent() {
+export async function getEvent() {
     try {
         const response = await fetch(`http://localhost:3000/api/events`);
         const data = await response.json();
@@ -54,4 +53,3 @@ async function getEvent() {
         console.error('Erreur de récupération des données :', error);
     }
 }
-getEvent()

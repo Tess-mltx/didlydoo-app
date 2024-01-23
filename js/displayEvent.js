@@ -10,11 +10,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         try {
             const events = await getEvent();
 
-            debugger
-
             events.forEach(async function (event) {
-                const detailedEvent = await fetchEvent(event);
-                displayEvent(detailedEvent);
+                displayEvent(event);
             });
         } catch (error) {
             console.error('Erreur lors de la récupération des événements', error);
