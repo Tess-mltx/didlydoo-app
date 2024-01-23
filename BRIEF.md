@@ -10,19 +10,20 @@ Le projet Didlydoo-App vise à créer une application web révolutionnaire perme
 ### ~~Création d'Événements~~ : DONE
 - Concevoir et implémenter le formulaire de création d'événements. Gérer l'envoi des données au backend.
 - Tester le formulaire, s'assurer que les données sont correctement envoyées au backend, et gérer les cas d'erreur.
+### Suppression d'Événements :
+- Implémenter la fonctionnalité de suppression d'événements.
+- Tester la suppression, s'assurer que les événements sont correctement supprimés, et gérer les erreurs.
 ### Modification d'Événements  :
 - Concevoir et implémenter la modification du nom, de la description et de l'auteur d'un événement.
 - Tester la modification, s'assurer que les données sont correctement mises à jour, et traiter les cas d'erreur.
 ### Ajout de Disponibilité à un Événement Existant :
 - Implémenter la fonctionnalité pour ajouter des dates de disponibilité à un événement existant.
 - Tester l'ajout de disponibilité, s'assurer que les dates sont correctement enregistrées, et gérer les erreurs.
-### Suppression d'Événements (Module 7) :
-- Implémenter la fonctionnalité de suppression d'événements.
-- Tester la suppression, s'assurer que les événements sont correctement supprimés, et gérer les erreurs.
+
 ### Affichage de la Meilleure Date Possible (Module 8) :
 - Alice : Concevoir et implémenter la logique d'affichage de la meilleure date possible.
 - Tess : Tester la logique, s'assurer que les dates sont correctement calculées, et traiter les scénarios particuliers.
-### Validation des Saisies (Module 9) :
+### Validation des Saisies :
 - Alice : Mettre en place la validation des saisies dans les formulaires.
 - Tess : Tester la validation, s'assurer que les erreurs sont correctement gérées, et ajuster si nécessaire.
 ### Tests Complémentaires et Intégration :

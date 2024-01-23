@@ -55,3 +55,4 @@ async function getEvent() {
         console.error('Erreur de récupération des données :', error);
     }
 }
+getEvent()
