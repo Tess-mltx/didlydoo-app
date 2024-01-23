@@ -1,13 +1,10 @@
 const addDateBtn = document.getElementById('addDateBtn');
 
-addDateBtn.addEventListener('click', () => {
-        
-    
-    });
+addDateBtn.addEventListener('click', addNewDate );
     
 function addNewDate() {
     const datesDiv = document.getElementById('datesInputs');
     const dateInput = document.createElement('input');
     dateInput.setAttribute('type', 'date');
-    datesDiv.appendChild(dateInput);
+    datesDiv.append(dateInput);
 }

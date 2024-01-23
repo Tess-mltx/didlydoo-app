@@ -4,21 +4,21 @@ Le projet Didlydoo-App vise à créer une application web révolutionnaire perme
 
 ## Spécifications
 
-### Affichage des Événements (Module 3) :
-- Alice : Implémenter la récupération des événements et l'affichage sur la page. Créer les composants nécessaires.
-- Tess : Vérifier les données récupérées du backend, s'assurer qu'elles sont correctement affichées, et tester cette fonctionnalité.
-### Création d'Événements (Module 4) :
-- Alice : Concevoir et implémenter le formulaire de création d'événements. Gérer l'envoi des données au backend.
-- Tess : Tester le formulaire, s'assurer que les données sont correctement envoyées au backend, et gérer les cas d'erreur.
-### Ajout de Disponibilité à un Événement Existant (Module 5) :
-- Alice : Implémenter la fonctionnalité pour ajouter des dates de disponibilité à un événement existant.
-- Tess : Tester l'ajout de disponibilité, s'assurer que les dates sont correctement enregistrées, et gérer les erreurs.
-### Modification d'Événements (Module 6) :
-- Alice : Concevoir et implémenter la modification du nom, de la description et de l'auteur d'un événement.
-- Tess : Tester la modification, s'assurer que les données sont correctement mises à jour, et traiter les cas d'erreur.
+### Affichage des Événements :
+- Implémenter la récupération des événements et l'affichage sur la page. Créer les composants nécessaires.
+- Vérifier les données récupérées du backend, s'assurer qu'elles sont correctement affichées, et tester cette fonctionnalité.
+### ~~Création d'Événements~~ : DONE
+- Concevoir et implémenter le formulaire de création d'événements. Gérer l'envoi des données au backend.
+- Tester le formulaire, s'assurer que les données sont correctement envoyées au backend, et gérer les cas d'erreur.
+### Modification d'Événements  :
+- Concevoir et implémenter la modification du nom, de la description et de l'auteur d'un événement.
+- Tester la modification, s'assurer que les données sont correctement mises à jour, et traiter les cas d'erreur.
+### Ajout de Disponibilité à un Événement Existant :
+- Implémenter la fonctionnalité pour ajouter des dates de disponibilité à un événement existant.
+- Tester l'ajout de disponibilité, s'assurer que les dates sont correctement enregistrées, et gérer les erreurs.
 ### Suppression d'Événements (Module 7) :
-- Alice : Implémenter la fonctionnalité de suppression d'événements.
-- Tess : Tester la suppression, s'assurer que les événements sont correctement supprimés, et gérer les erreurs.
+- Implémenter la fonctionnalité de suppression d'événements.
+- Tester la suppression, s'assurer que les événements sont correctement supprimés, et gérer les erreurs.
 ### Affichage de la Meilleure Date Possible (Module 8) :
 - Alice : Concevoir et implémenter la logique d'affichage de la meilleure date possible.
 - Tess : Tester la logique, s'assurer que les dates sont correctement calculées, et traiter les scénarios particuliers.
