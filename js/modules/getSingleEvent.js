@@ -1,6 +1,6 @@
 import { getTheID } from "../utils/getTheID.js"
 // WIP - need objectID on cardEvent
-async function getSingleEvent(eventId) {
+export async function getSingleEvent(eventId) {
         try {
             const response = await fetch(`http://localhost:3000/api/events/${eventId}`);
             const data = await response.json();
