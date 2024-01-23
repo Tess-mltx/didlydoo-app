@@ -1,22 +1,46 @@
-const submitNewEvent = document.getElementById('submitEvent');
-const nameEventInput = document.getElementById('nameEvent');
-const authorInput = document.getElementById('author');
-const datesInput = document.getElementById('dates');
-const descriptionInput = document.getElementById('desc');
+// const submitNewEvent = document.getElementById('submitEvent');
+// const nameEventInput = document.getElementById('nameEvent');
+// const authorInput = document.getElementById('author');
+// const datesDiv = document.getElementById('dates');
+// const datesInput = datesDiv.querySelectorAll('input[type="date"]');
+// const descriptionInput = document.getElementById('desc');
 
-submitNewEvent.addEventListener('click', event => {
-    event.preventDefault();
+// let datesArray = [];
 
-});
+// submitNewEvent.addEventListener('click', () => {
+//     datesInput.forEach(input => {
+//         let date = input.value;
+//         datesArray.push(date);
+//         postNewEvent()
+//       });
+//     postNewEvent();
+
+// });
+
 
 async function postNewEvent() {
     const name = nameEventInput.value;
-    // const dates = ;
+    const dates = datesArray;
     const author = authorInput.value;
-    const desciption = descriptionInput.textContent;
+    const description = descriptionInput.textContent;
+
+    await fetch('http://localhost:3000/api/events/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: name,
+            dates: dates,
+            author: author,
+            description: description,
+        }),
+    })
+    getEvent();
 
 
 }
+postNewEvent()
 
 async function getEvent() {
     try {
@@ -28,4 +52,3 @@ async function getEvent() {
         console.error('Erreur de récupération des données :', error);
     }
 }
-getEvent()
