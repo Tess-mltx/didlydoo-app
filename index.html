@@ -13,25 +13,18 @@
 </head>
 
 <body>
-    <header class="headerPage">
-        <div class="headerPage-navContainer">
-            <a href="#" class="headerPage-logoAccueil"><img class="headerPage-logoAccueil-img" src="img/becode-logo.png" alt="logo du cofeeShop"></a>
-            <input type="checkbox" class="headerPage-navContainer-darkModeInput" id="toggleDarkMode">
-            <label for="toggleDarkMode" class="headerPage-navContainer-darkModeLabel">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <span class="headerPage-navContainer-darkModeLabel-ball"></span>
-            </label>
-        </div>
-        <section class="headerPage-sectionHeader">
-            <hgroup class="headerPage-sectionHeader-">
-                <h1>Titre 1</h1>
-                <p>Sous titre ou slogan</p>
-            </hgroup>
-        </section>
+    <header>
+        <button type="button" id="createEvent">Créer evenement</button>
+        <form class="createEventForm">
+            <button type="button" class="createEventForm_close">X</button>
+            <input type="text" id="nameEvent" placeholder="Entrez le nom de votre evenement...">
+            <input type="text" id="Author" placeholder="Entrez votre nom...">
+            <textarea id="desc">Description :</textarea>
+            <button type="button" id="submitEvent">Validation</button>
+        </form>
+        <button type="button" id="seeEvent">Voir évenements</button>
     </header>
     <main>
-
 
         
     </main>
