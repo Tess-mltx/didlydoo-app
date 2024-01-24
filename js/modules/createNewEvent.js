@@ -44,7 +44,7 @@ async function postNewEvent() {
 }
 
 
-export async function getEvent() {
+async function getEvent() {
     try {
         const response = await fetch(`http://localhost:3000/api/events`);
         const data = await response.json();
