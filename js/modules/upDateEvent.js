@@ -1,3 +1,9 @@
+import { getTheID } from "../utils/getTheID";
+import { getSingleEvent } from "./getSingleEvent";
+
+const btnAllEvent = document.getElementById('seeEvent');
+btnAllEvent.addEventListener('click', setupEditBtn());
+
 function setupEditBtn() {
     console.log("Setting up edit fct");
     let btnEdit = document.querySelectorAll('.btnEdit');
@@ -10,7 +16,7 @@ async function editWorkflow(btn) {
     let eventId = await getTheID(btn);
     console.log("Setting up edit btn; id : ", eventId);
     let event = await getSingleEvent(eventId);
-    let form = await editionForm(event);
+    let form = editionForm(event);
 
     let btnSubmit = form.querySelector('editEventForm-btnSubmit');
     btnSubmit.addEventListener('click', editEvent(eventId))

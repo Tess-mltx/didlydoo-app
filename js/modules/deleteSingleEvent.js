@@ -1,5 +1,8 @@
 import { getTheID } from "../utils/getTheID";
 
+const btnAllEvent = document.querySelector('#seeEvent');
+btnAllEvent.addEventListener('click',  async function () {setupDeleteBtn()})
+
 function setupDeleteBtn() {
     console.log("Setting up delete fct");
     let btnDelete = document.querySelectorAll('.btnDelete'); // <=== a ajouter au displayCardEvent
@@ -14,7 +17,7 @@ function setupDeleteBtn() {
         })
     });
 };
-setupDeleteBtn()
+
 
 
 async function deleteEvent(eventId) {

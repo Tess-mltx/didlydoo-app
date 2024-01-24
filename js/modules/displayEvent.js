@@ -1,6 +1,6 @@
 import { getEvent } from './createNewEvent.js';
 
-document.addEventListener('DOMContentLoaded', async function () {
+// document.addEventListener('DOMContentLoaded', async function () {
     const seeEventButton = document.getElementById('seeEvent');
     const mainContainer = document.querySelector('main');
 
@@ -39,16 +39,18 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
 
         const deleteButton = document.createElement('button');
+        deleteButton.classList.add('.btnDelete')
         deleteButton.textContent = 'Supprimer';
-        deleteButton.addEventListener('click', function () {
-            //logique pour supprimer l'événement
-        });
+        // deleteButton.addEventListener('click', function () {
+        //     //logique pour supprimer l'événement
+        // });
 
         const editButton = document.createElement('button');
+        editButton.classList.add('..btnEdit')
         editButton.textContent = 'Éditer';
-        editButton.addEventListener('click', function () {
-            //logique pour éditer l'événement
-        });
+        // editButton.addEventListener('click', function () {
+        //     //logique pour éditer l'événement
+        // });
 
         eventCard.appendChild(deleteButton);
         eventCard.appendChild(editButton);
@@ -59,4 +61,4 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         mainContainer.appendChild(eventCard);
     }
-});
+// });
