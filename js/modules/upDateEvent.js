@@ -1,29 +1,32 @@
 import { getTheID } from "../utils/getTheID";
 import { getSingleEvent } from "./getSingleEvent";
 
-const btnAllEvent = document.getElementById('seeEvent');
-btnAllEvent.addEventListener('click', setupEditBtn());
+// const btnAllEvent = document.getElementById('seeEvent');
+// btnAllEvent.addEventListener('click', setupEditBtn());
 
-function setupEditBtn() {
+export function setupEditBtn() {
     console.log("Setting up edit fct");
     let btnEdit = document.querySelectorAll('.btnEdit');
     btnEdit.forEach(btn => {
-        btn.addEventListener('click', editWorkflow(btn));
+        btn.addEventListener('click', async function () {
+            let eventId = await getTheID(btn);
+            editWorkflow(eventId);
+        })
     });
 }
 
-async function editWorkflow(btn) {
-    let eventId = await getTheID(btn);
+async function editWorkflow(eventId) {
     console.log("Setting up edit btn; id : ", eventId);
     let event = await getSingleEvent(eventId);
-    let form = editionForm(event);
-
-    let btnSubmit = form.querySelector('editEventForm-btnSubmit');
-    btnSubmit.addEventListener('click', editEvent(eventId))
+    await editionForm(event);
+    let btnSubmit = document.querySelector('.editEventForm-btnSubmit');
+    btnSubmit.addEventListener('click', async function () {
+        editEvent(eventId)
+    })
 }
 
-function editionForm(event) {
-    let card = document.querySelector('event-card');
+async function editionForm(event) {
+    let card = document.querySelector('.event-card');
 
     let editForm = document.createElement('form');
     editForm.classList.add("editEventForm");
@@ -37,7 +40,7 @@ function editionForm(event) {
     let newAuthor = document.createElement('input');
     newAuthor.classList.add("editEventForm-author");
     newAuthor.placeholder = event.author;
-    editForm.appendChild(newTitle);
+    editForm.appendChild(newAuthor);
 
     let newDesc = document.createElement('textarea');
     newDesc.classList.add("editEventForm-description");
@@ -53,10 +56,10 @@ function editionForm(event) {
 async function editEvent(eventId) { // <=== a appeler au click su submit edit
     const name = document.querySelector('.editEventForm-title').value;
     const author = document.querySelector('.editEventForm-author').value;
-    const description = document.querySelector('editEventForm-description').value;
+    const description = document.querySelector('.editEventForm-description').value;
     try {
         await fetch(`http://localhost:3000/api/events/${eventId}`, {
-            method: 'POST',
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
             },

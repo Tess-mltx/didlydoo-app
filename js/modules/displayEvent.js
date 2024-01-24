@@ -1,6 +1,7 @@
 import { getEvent } from './createNewEvent.js';
+import { setupEditBtn } from './upDateEvent.js';
+import { setupDeleteBtn } from './deleteSingleEvent.js';
 
-// document.addEventListener('DOMContentLoaded', async function () {
     const seeEventButton = document.getElementById('seeEvent');
     const mainContainer = document.querySelector('main');
 
@@ -10,15 +11,18 @@ import { getEvent } from './createNewEvent.js';
         try {
             const events = await getEvent();
 
-            events.forEach(event => {
+            await events.forEach(event => {
                 displayEvent(event);
             });
+            setupEditBtn();
+            setupDeleteBtn();
+
         } catch (error) {
             console.error('Erreur lors de la récupération des événements', error);
         }
     });
 
-    function displayEvent(event) {
+    export function displayEvent(event) {
         const eventCard = document.createElement('div');
         eventCard.classList.add('event-card');
         eventCard.id = event.id;
@@ -34,23 +38,17 @@ import { getEvent } from './createNewEvent.js';
 
         const participateButton = document.createElement('button');
         participateButton.textContent = 'Participer';
-        participateButton.addEventListener('click', function () {
-            //logique pour participer à l'événement
-        });
+        participateButton.classList.add('participate-button'); 
+    
 
         const deleteButton = document.createElement('button');
-        deleteButton.classList.add('.btnDelete')
+        deleteButton.classList.add('btnDelete')
         deleteButton.textContent = 'Supprimer';
-        // deleteButton.addEventListener('click', function () {
-        //     //logique pour supprimer l'événement
-        // });
+     
 
         const editButton = document.createElement('button');
-        editButton.classList.add('..btnEdit')
+        editButton.classList.add('btnEdit')
         editButton.textContent = 'Éditer';
-        // editButton.addEventListener('click', function () {
-        //     //logique pour éditer l'événement
-        // });
 
         eventCard.appendChild(deleteButton);
         eventCard.appendChild(editButton);
@@ -60,5 +58,5 @@ import { getEvent } from './createNewEvent.js';
         eventCard.appendChild(participateButton);
 
         mainContainer.appendChild(eventCard);
-    }
-// });
+    };
+

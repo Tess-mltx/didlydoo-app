@@ -27,17 +27,17 @@
   },
   {
     "id": "08b94fe4bfd0",
-    "name": "evenement ola",
-    "author": "Tess",
-    "description": "Tout le monde veut devenir un cat",
+    "name": "Edit name",
+    "author": "Tess2.0",
+    "description": "edit de la description",
     "dates": [
       "2023-04-16",
       "2023-04-17",
       "2023-04-19"
     ],
     "created_at": "2024-01-23T14:22:54.349Z",
-    "num_modification": 0,
-    "last_modification": "2024-01-23T14:22:54.349Z",
+    "num_modification": 1,
+    "last_modification": "2024-01-24T16:48:28.080Z",
     "attendees": []
   },
   {
