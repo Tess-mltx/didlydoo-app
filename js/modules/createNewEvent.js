@@ -1,22 +1,23 @@
-const submitNewEvent = document.getElementById('submitEvent');
+const submitNewEvent = document.querySelector('#submitEvent')
 const nameEventInput = document.getElementById('nameEvent');
 const authorInput = document.getElementById('author');
 const datesDiv = document.getElementById('datesInputs');
-const datesInput = datesDiv.querySelectorAll('input[type="date"]');
 const descriptionInput = document.getElementById('desc');
 
 
 let datesArray = [];
 
-// submitNewEvent.addEventListener('click', () => {
-//     datesInput.forEach(input => {
-//         let date = input.value;
-//         datesArray.push(date);
-//         postNewEvent()
-//       });
-//     postNewEvent();
+submitNewEvent.addEventListener('click', () => {
+    const datesInput = datesDiv.querySelectorAll('input[type="date"]');
+    datesInput.forEach(input => {
+        let date = input.value;
+        datesArray.push(date);
 
-// });
+      });
+      console.log(datesArray);
+    // postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
+
+});
 
 
 async function postNewEvent() {
@@ -42,6 +43,7 @@ async function postNewEvent() {
 
 }
 
+
 export async function getEvent() {
     try {
         const response = await fetch(`http://localhost:3000/api/events`);
@@ -53,3 +55,4 @@ export async function getEvent() {
         console.error('Erreur de récupération des données :', error);
     }
 }
+getEvent()

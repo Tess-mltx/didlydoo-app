@@ -1,5 +1,5 @@
 # Name project
-Short description about the project.
+Le projet Didlydoo-App vise à créer une application web permettant aux utilisateurs de planifier des événements avec leurs amis et proches.
 ## Table of Contents
 1. [General Info](#general-info)
 2. [Technologies](#technologies)
@@ -8,15 +8,17 @@ Short description about the project.
 5. [FAQs](#faqs)
 ### General Info
 ***
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+L'objectif principal est de se concentrer sur le développement du frontend, en utilisant une API backend existante. Les principales fonctionnalités incluent l'affichage des événements, la création d'événements, l'ajout de disponibilités aux événements, l'édition et la suppression d'événements.
 ### Screenshot
 ![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
 ## Technologies
 ***
 A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
+* [npm](https://example.com): Version 12.3 
+* [node](https://example.com): Version 2.34
+* [vite](https://example.com): Version 1234
+* [SASS](https://example.com): Version 1234
+
 ## Installation
 ***
 A little intro about the installation. 
