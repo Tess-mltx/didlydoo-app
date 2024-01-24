@@ -1,6 +1,6 @@
 import { getEvent } from './createNewEvent.js';
 
-document.addEventListener('DOMContentLoaded', async function () {
+
     const seeEventButton = document.getElementById('seeEvent');
     const mainContainer = document.querySelector('main');
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     });
 
-    function displayEvent(event) {
+    export function displayEvent(event) {
         const eventCard = document.createElement('div');
         eventCard.classList.add('event-card');
 
@@ -33,21 +33,15 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         const participateButton = document.createElement('button');
         participateButton.textContent = 'Participer';
-        participateButton.addEventListener('click', function () {
-            //logique pour participer à l'événement
-        });
+        participateButton.classList.add('participate-button'); 
+    
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Supprimer';
-        deleteButton.addEventListener('click', function () {
-            //logique pour supprimer l'événement
-        });
+     
 
         const editButton = document.createElement('button');
         editButton.textContent = 'Éditer';
-        editButton.addEventListener('click', function () {
-            //logique pour éditer l'événement
-        });
 
         eventCard.appendChild(deleteButton);
         eventCard.appendChild(editButton);
@@ -57,5 +51,5 @@ document.addEventListener('DOMContentLoaded', async function () {
         eventCard.appendChild(participateButton);
 
         mainContainer.appendChild(eventCard);
-    }
-});
+    };
+
