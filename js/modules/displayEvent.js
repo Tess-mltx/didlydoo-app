@@ -1,5 +1,6 @@
 import { getEvent } from './createNewEvent.js';
-
+import { setupEditBtn } from './upDateEvent.js';
+import { setupDeleteBtn } from './deleteSingleEvent.js';
 
     const seeEventButton = document.getElementById('seeEvent');
     const mainContainer = document.querySelector('main');
@@ -10,9 +11,12 @@ import { getEvent } from './createNewEvent.js';
         try {
             const events = await getEvent();
 
-            events.forEach(event => {
+            await events.forEach(event => {
                 displayEvent(event);
             });
+            setupEditBtn();
+            setupDeleteBtn();
+
         } catch (error) {
             console.error('Erreur lors de la récupération des événements', error);
         }
@@ -21,6 +25,7 @@ import { getEvent } from './createNewEvent.js';
     export function displayEvent(event) {
         const eventCard = document.createElement('div');
         eventCard.classList.add('event-card');
+        eventCard.id = event.id;
 
         const eventName = document.createElement('h3');
         eventName.textContent = event.name;
@@ -39,10 +44,12 @@ import { getEvent } from './createNewEvent.js';
         })
 
         const deleteButton = document.createElement('button');
+        deleteButton.classList.add('btnDelete')
         deleteButton.textContent = 'Supprimer';
 
 
         const editButton = document.createElement('button');
+        editButton.classList.add('btnEdit')
         editButton.textContent = 'Éditer';
 
         eventCard.appendChild(deleteButton);
