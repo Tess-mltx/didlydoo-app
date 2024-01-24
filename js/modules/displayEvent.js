@@ -1,4 +1,4 @@
-import { getEvent, getSingleEvent } from './modules/createNewEvent.js';
+import { getEvent } from './createNewEvent.js';
 
 document.addEventListener('DOMContentLoaded', async function () {
     const seeEventButton = document.getElementById('seeEvent');
@@ -8,36 +8,17 @@ document.addEventListener('DOMContentLoaded', async function () {
         mainContainer.innerHTML = '';
 
         try {
-            const eventIds = await getEvent();
-            const detailedEventsPromises = eventIds.map(eventId => getSingleEvent(eventId));
-            const detailedEvents = await Promise.all(detailedEventsPromises);
+            const events = await getEvent();
 
-            const zippedEvents = zip(eventIds, detailedEvents);
-
-            zippedEvents.forEach(([eventId, detailedEvent]) => {
-                displayEvent({ id: eventId, ...detailedEvent });
+            events.forEach(event => {
+                displayEvent(event);
             });
         } catch (error) {
             console.error('Erreur lors de la récupération des événements', error);
         }
     });
 
-    // async function fetchEvent(event) {
-    //     try {
-    //         const response = await fetch(`/api/events/${event.id}`);
-    //         const detailedEvent = await response.json();
-    //         return detailedEvent;
-    //     } catch (error) {
-    //         console.error(`Erreur lors de la récupération de l'événement ${event.id}`, error);
-    //         return null;
-    //     }
-    // }
-
     function displayEvent(event) {
-        if (!event) {
-            return "pas d'evenement"; 
-        }
-
         const eventCard = document.createElement('div');
         eventCard.classList.add('event-card');
 
@@ -56,6 +37,20 @@ document.addEventListener('DOMContentLoaded', async function () {
             //logique pour participer à l'événement
         });
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Supprimer';
+        deleteButton.addEventListener('click', function () {
+            //logique pour supprimer l'événement
+        });
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Éditer';
+        editButton.addEventListener('click', function () {
+            //logique pour éditer l'événement
+        });
+
+        eventCard.appendChild(deleteButton);
+        eventCard.appendChild(editButton);
         eventCard.appendChild(eventName);
         eventCard.appendChild(eventDescription);
         eventCard.appendChild(eventAuthor);
