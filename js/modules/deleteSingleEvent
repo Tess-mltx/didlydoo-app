@@ -1,0 +1,29 @@
+import { getTheID } from "../utils/getTheID";
+
+function setupDeleteBtn() {
+    console.log("Setting up delete fct");
+    let btnDelete = document.querySelectorAll('.btnDelete'); // <=== a ajouter au displayCardEvent
+
+    btnDelete.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            let id = getTheID(btn);
+            console.log("Setting up delete btn; id : ", id);
+            deleteEvent(id);
+
+        })
+    });
+};
+setupDeleteBtn()
+
+
+async function deleteEvent(eventId) {
+
+    await fetch(`http://localhost:3000/api/events/${eventId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+
+};
