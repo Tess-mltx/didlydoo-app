@@ -1,91 +1,63 @@
 [
   {
-    "id": "e7b322e92e28",
+    "id": "83cc2eea81ff",
+    "name": "evenement du desespoir",
+    "author": "tess",
+    "description": "je suis au bout de ma vie",
+    "dates": [
+      "2024-02-01",
+      "2024-01-27",
+      "2024-01-28"
+    ],
+    "created_at": "2024-01-25T08:25:34.976Z",
+    "num_modification": 0,
+    "last_modification": "2024-01-25T08:25:34.976Z",
+    "attendees": []
+  },
+  {
+    "id": "c86573c0370f",
+    "name": "new event",
+    "author": "tess",
+    "description": "Descrje met une desciption :",
+    "dates": [
+      "2024-01-25",
+      "2024-01-26",
+      "2024-01-27"
+    ],
+    "created_at": "2024-01-24T21:24:54.447Z",
+    "num_modification": 0,
+    "last_modification": "2024-01-24T21:24:54.447Z",
+    "attendees": []
+  },
+  {
+    "id": "208296ff0f24",
     "name": "Test post event via form",
     "author": "tess",
-    "description": "Description :",
-    "dates": [],
-    "created_at": "2024-01-23T17:07:06.831Z",
+    "description": "Description : ca prend pas la desc",
+    "dates": [
+      "2024-01-26",
+      "2024-01-27",
+      "2024-01-29"
+    ],
+    "created_at": "2024-01-24T20:40:45.191Z",
     "num_modification": 0,
-    "last_modification": "2024-01-23T17:07:06.831Z",
+    "last_modification": "2024-01-24T20:40:45.191Z",
     "attendees": []
   },
   {
-    "id": "a9873641e7e2",
-    "name": "evenement ola",
+    "id": "76a7f8f49c6d",
+    "name": "test de mercredi",
     "author": "Tess",
-    "description": "Tout le monde veut devenir un cat",
+    "description": "Description :",
     "dates": [
-      "2023-04-16",
-      "2023-04-17",
-      "2023-04-19"
+      "2024-01-25",
+      "2024-01-26",
+      "2024-01-27"
     ],
-    "created_at": "2024-01-23T14:24:48.532Z",
+    "created_at": "2024-01-24T20:32:56.412Z",
     "num_modification": 0,
-    "last_modification": "2024-01-23T14:24:48.532Z",
+    "last_modification": "2024-01-24T20:32:56.412Z",
     "attendees": []
-  },
-  {
-    "id": "08b94fe4bfd0",
-    "name": "Edit name",
-    "author": "Tess2.0",
-    "description": "edit de la description",
-    "dates": [
-      "2023-04-16",
-      "2023-04-17",
-      "2023-04-19"
-    ],
-    "created_at": "2024-01-23T14:22:54.349Z",
-    "num_modification": 1,
-    "last_modification": "2024-01-24T16:48:28.080Z",
-    "attendees": []
-  },
-  {
-    "id": "f5b6564b5dc4",
-    "name": "My sweet 16",
-    "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
-    "author": "John Doe",
-    "dates": [
-      "2022-03-17",
-      "2022-03-18",
-      "2022-03-21",
-      "2022-03-22"
-    ],
-    "attendees": [
-      {
-        "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
-            "date": "2022-03-21",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Jean-Daniel",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": false
-          },
-          {
-            "date": "2022-03-21",
-            "available": true
-          }
-        ]
-      }
-    ],
-    "created_at": "2021-11-15T00:00",
-    "num_modification": 3,
-    "last_modification": "2021-11-15T02:15"
   },
   {
     "id": "38b643aeb883",

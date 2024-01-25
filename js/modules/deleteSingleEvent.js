@@ -1,19 +1,17 @@
 import { getTheID } from "../utils/getTheID";
 
-const btnAllEvent = document.querySelector('#seeEvent');
-btnAllEvent.addEventListener('click',  async function () {setupDeleteBtn()})
+
+// const btnAllEvent = document.querySelector('#seeEvent');
+// btnAllEvent.addEventListener('click',  async function () {setupDeleteBtn()})
 
 export function setupDeleteBtn() {
     console.log("Setting up delete fct");
-    let btnDelete = document.querySelectorAll('.btnDelete'); // <=== a ajouter au displayCardEvent
-
+    let btnDelete = document.querySelectorAll('.btnDelete');
     btnDelete.forEach(btn => {
-        btn.addEventListener('click', () => {
-
-            let id = getTheID(btn);
+        btn.addEventListener('click', async function () {
+            let id = await getTheID(btn);
             console.log("Setting up delete btn; id : ", id);
             deleteEvent(id);
-
         })
     });
 };
@@ -29,6 +27,7 @@ async function deleteEvent(eventId) {
             }
         })
     } catch (error) {
-
+        console.error('Erreur de récupération des données :', error);
     }
+    location.reload();
 };

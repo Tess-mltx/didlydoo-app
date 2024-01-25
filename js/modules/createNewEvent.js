@@ -2,7 +2,7 @@ const submitNewEvent = document.querySelector('#submitEvent')
 const nameEventInput = document.getElementById('nameEvent');
 const authorInput = document.getElementById('author');
 const datesDiv = document.getElementById('datesInputs');
-const descriptionInput = document.getElementById('desc');
+const descriptionInput = document.querySelector('#desc');
 
 
 let datesArray = [];
@@ -15,7 +15,7 @@ submitNewEvent.addEventListener('click', () => {
 
       });
       console.log(datesArray);
-    // postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
+    postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
 
 });
 
@@ -24,7 +24,7 @@ async function postNewEvent() {
     const name = nameEventInput.value;
     const dates = datesArray;
     const author = authorInput.value;
-    const description = descriptionInput.textContent;
+    const description = descriptionInput.value;
 
     await fetch('http://localhost:3000/api/events/', {
         method: 'POST',

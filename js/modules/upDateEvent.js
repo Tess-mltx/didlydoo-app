@@ -18,7 +18,7 @@ export function setupEditBtn() {
 async function editWorkflow(eventId) {
     console.log("Setting up edit btn; id : ", eventId);
     let event = await getSingleEvent(eventId);
-    await editionForm(event);
+    await editionForm(event, eventId);
     let btnSubmit = document.querySelector('.editEventForm-btnSubmit');
     btnSubmit.addEventListener('click', async function () {
         editEvent(eventId)
