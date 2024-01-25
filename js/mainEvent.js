@@ -10,7 +10,6 @@ displayEventDetails(eventId);
 
 async function displayEventDetails(eventId) {
     try {
-
         const event = await getSingleEvent(eventId);
 
         title.textContent = event.name;

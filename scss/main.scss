@@ -161,6 +161,10 @@ $accent-color: #9c27b0;   // violet primaire (inverse du violet accentué)
     td:first-child {
       border-right: none;  // Supprime la bordure à droite pour la première colonne
     }
+
+    .best-date {
+      outline: 2px solid #CC00CC;
+    }
   
     input {
       width: 100%;

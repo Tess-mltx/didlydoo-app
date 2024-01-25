@@ -436,6 +436,9 @@ header button {
 .date-table td:first-child {
   border-right: none;
 }
+.date-table .best-date {
+  outline: 2px solid #CC00CC;
+}
 .date-table input {
   width: 100%;
   padding: 8px;
