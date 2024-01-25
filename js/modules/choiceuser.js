@@ -19,12 +19,12 @@ export function generateDateTable(event) {
 
             switch (col) {
                 case true:
-                    cellElm.innerHTML = '<i class="fa-solid fa-check"></i>'
+                    cellElm.innerHTML = '<i class="fa-solid fa-check" style="color:hsl(140, 100%, 37%)"></i>'
                     break
 
                 case false:
                 case null:
-                    cellElm.innerHTML = '<i class="fa-solid fa-xmark"></i>'
+                    cellElm.innerHTML = '<i class="fa-solid fa-xmark" style="color:hsl(0, 100%, 42%)"></i>'
                     break
 
                 default:
