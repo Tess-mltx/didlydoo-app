@@ -4,16 +4,16 @@ Le projet Didlydoo-App vise à créer une application web révolutionnaire perme
 
 ## Spécifications
 
-### Affichage des Événements :
+### ~~Affichage des Événements~~ : DONE
 - Implémenter la récupération des événements et l'affichage sur la page. Créer les composants nécessaires.
 - Vérifier les données récupérées du backend, s'assurer qu'elles sont correctement affichées, et tester cette fonctionnalité.
 ### ~~Création d'Événements~~ : DONE
 - Concevoir et implémenter le formulaire de création d'événements. Gérer l'envoi des données au backend.
 - Tester le formulaire, s'assurer que les données sont correctement envoyées au backend, et gérer les cas d'erreur.
-### Suppression d'Événements :
+### ~~Suppression d'Événements~~ : DONE
 - Implémenter la fonctionnalité de suppression d'événements.
 - Tester la suppression, s'assurer que les événements sont correctement supprimés, et gérer les erreurs.
-### Modification d'Événements  :
+### ~~Modification d'Événements~~ : DONE
 - Concevoir et implémenter la modification du nom, de la description et de l'auteur d'un événement.
 - Tester la modification, s'assurer que les données sont correctement mises à jour, et traiter les cas d'erreur.
 ### Ajout de Disponibilité à un Événement Existant :
