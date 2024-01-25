@@ -72,7 +72,8 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -307,36 +308,149 @@ template {
   display: none;
 }
 
-.headerPage-navContainer-darkModeInput {
-  opacity: 0;
-  position: absolute;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
-.headerPage-navContainer-darkModeInput:checked + .headerPage-navContainer-darkModeLabel .headerPage-navContainer-darkModeLabel-ball {
-  transform: translateX(30px);
+body input:required:invalid {
+  border: 2px solid red;
 }
 
-.headerPage-navContainer-darkModeLabel {
-  background-color: #111;
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
+header {
+  background-color: #e1bee7;
+  color: #fff;
+  padding: 15px;
+}
+header button {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+  border: none;
   cursor: pointer;
+}
+
+.createEventForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.createEventForm input, .createEventForm textarea, .createEventForm button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #9c27b0;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.createEventForm button {
+  background-color: #9c27b0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.createEventForm #addDateBtn {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.createEventForm #datesInputs {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-.headerPage-navContainer-darkModeLabel .fa-moon, .headerPage-navContainer-darkModeLabel .fa-sun {
-  color: #f1c40f;
+.createEventForm #datesInputs input {
+  flex: 1;
 }
-.headerPage-navContainer-darkModeLabel .headerPage-navContainer-darkModeLabel-ball {
+
+.event-card {
   background-color: #fff;
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  left: 2px;
-  top: 5px;
-  border-radius: 50%;
-  transition: transform 0.4s ease-in-out;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+}
+.event-card h3 {
+  color: #e1bee7;
+}
+.event-card p {
+  color: #555;
+}
+.event-card .participate-button {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.event-card .btnDelete, .event-card .btnEdit {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.event-card #createEvent, .event-card #seeEvent {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+.event-card #submitEvent {
+  background-color: #9c27b0;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mainPage {
+  width: 100%;
+}
+
+#eventDetails {
+  margin-top: 20px;
+}
+
+.date-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.date-table th, .date-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+}
+.date-table th:first-child,
+.date-table td:first-child {
+  border-right: none;
+}
+.date-table input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+.date-table input[type=checkbox] {
+  display: block;
+  margin: 0 auto;
+}
+.date-table button {
+  background-color: #9c27b0;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

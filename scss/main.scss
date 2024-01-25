@@ -5,6 +5,182 @@
 @import './vendors/reset';
 @import './utils/variables';
 @import './utils/mixins';
-@import './base/base.scss';
-@import './components/toggleDarkMode';
-@import './components/buttons';
+
+// Variables de couleur mauve inversées
+$primary-color: #e1bee7;  // violet accentué (inverse du violet primaire)
+$accent-color: #9c27b0;   // violet primaire (inverse du violet accentué)
+
+// Styles généraux
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  input:required:invalid {
+    border: 2px solid red;
+  }
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 15px;
+
+  button {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+// Styles pour le formulaire de création d'événement
+// Variables de couleur mauve inversées
+$primary-color: #e1bee7;  // violet accentué (inverse du violet primaire)
+$accent-color: #9c27b0;   // violet primaire (inverse du violet accentué)
+
+// Styles pour le formulaire de création d'événement
+.createEventForm {
+
+  max-width: 400px;
+  margin: 0 auto;
+
+  input, textarea, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid $accent-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: $accent-color;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #addDateBtn {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #datesInputs {
+    display: flex;
+    align-items: center;
+
+    input {
+      flex: 1;
+    }
+  }
+}
+
+
+// Styles pour les cartes d'événements
+.event-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+
+  h3 {
+    color: $primary-color;
+  }
+
+  p {
+    color: #555;
+  }
+
+  .participate-button {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btnDelete, .btnEdit {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  #createEvent, #seeEvent {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  #submitEvent {
+    background-color: $accent-color;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.mainPage {
+    width: 100%;
+  }
+  
+  #eventDetails {
+    margin-top: 20px;
+  }
+  
+  .date-table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    th:first-child,
+    td:first-child {
+      border-right: none;  // Supprime la bordure à droite pour la première colonne
+    }
+  
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+  
+    input[type="checkbox"] {
+      display: block;
+      margin: 0 auto;
+    }
+  
+    button {
+      background-color: #9c27b0;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
