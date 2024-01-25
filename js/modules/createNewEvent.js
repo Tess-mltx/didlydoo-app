@@ -13,9 +13,9 @@ submitNewEvent.addEventListener('click', () => {
         let date = input.value;
         datesArray.push(date);
 
-    });
-    console.log(datesArray);
-    postNewEvent();
+      });
+      console.log(datesArray);
+    postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
 
 });
 
