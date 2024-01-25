@@ -5,6 +5,8 @@
 @import './vendors/reset';
 @import './utils/variables';
 @import './utils/mixins';
+@import './components/toggleDarkMode';
+@import './base/base';
 
 // Variables de couleur mauve inversées
 $primary-color: #e1bee7;  // violet accentué (inverse du violet primaire)
