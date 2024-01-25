@@ -26,7 +26,7 @@ async function editWorkflow(eventId) {
 }
 
 async function editionForm(event) {
-    let card = document.querySelector('.event-card');
+    let card = document.querySelector(`#${event.id}`);
 
     let editForm = document.createElement('form');
     editForm.classList.add("editEventForm");
@@ -34,20 +34,25 @@ async function editionForm(event) {
 
     let newTitle = document.createElement('input');
     newTitle.classList.add("editEventForm-title");
-    newTitle.placeholder = event.name;
+    newTitle.textContent = event.name;
+    newTitle.setAttribute('required');
     editForm.appendChild(newTitle);
 
     let newAuthor = document.createElement('input');
     newAuthor.classList.add("editEventForm-author");
-    newAuthor.placeholder = event.author;
+    newAuthor.setAttribute('required')
+    newAuthor.textContent = event.author;
     editForm.appendChild(newAuthor);
 
     let newDesc = document.createElement('textarea');
     newDesc.classList.add("editEventForm-description");
-    newDesc.placeholder = event.description;
+    newDesc.setAttribute('required')
+    newDesc.setAttribute('maxlenght', '256')
+    newDesc.textContent = event.description;
     editForm.appendChild(newDesc);
 
     let submitEdit = document.createElement('button');
+    submitEdit.setAttribute("type", "button")
     submitEdit.classList.add("editEventForm-btnSubmit");
     submitEdit.appendChild(document.createTextNode('Editer'));
     editForm.appendChild(submitEdit);
@@ -58,7 +63,7 @@ async function editEvent(eventId) { // <=== a appeler au click su submit edit
     const author = document.querySelector('.editEventForm-author').value;
     const description = document.querySelector('.editEventForm-description').value;
     try {
-        await fetch(`http://localhost:3000/api/events/${eventId}`, {
+        await fetch(`http://localhost:3000/api/events/${eventId}/`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
