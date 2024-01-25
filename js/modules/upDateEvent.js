@@ -26,7 +26,7 @@ async function editWorkflow(eventId) {
 }
 
 async function editionForm(event) {
-    let card = document.querySelector(`#${enven.id}`);
+    let card = document.querySelector(`#card-${event.id}`);
 
     let editForm = document.createElement('form');
     editForm.classList.add("editEventForm");
@@ -34,21 +34,21 @@ async function editionForm(event) {
 
     let newTitle = document.createElement('input');
     newTitle.classList.add("editEventForm-title");
-    newTitle.textContent = event.name;
-    newTitle.setAttribute('required');
+    newTitle.value = event.name;
+    newTitle.setAttribute('required', true);
     editForm.appendChild(newTitle);
 
     let newAuthor = document.createElement('input');
     newAuthor.classList.add("editEventForm-author");
-    newAuthor.setAttribute('required')
-    newAuthor.textContent = event.author;
+    newAuthor.setAttribute('required', true)
+    newAuthor.value = event.author;
     editForm.appendChild(newAuthor);
 
     let newDesc = document.createElement('textarea');
     newDesc.classList.add("editEventForm-description");
-    newDesc.setAttribute('required')
+    newDesc.setAttribute('required', true)
     newDesc.setAttribute('maxlenght', '256')
-    newDesc.textContent = event.description;
+    newDesc.value = event.description;
     editForm.appendChild(newDesc);
 
     let submitEdit = document.createElement('button');

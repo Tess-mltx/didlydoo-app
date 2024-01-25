@@ -25,7 +25,7 @@ seeEventButton.addEventListener('click', async function () {
 export function displayEvent(event) {
     const eventCard = document.createElement('div');
     eventCard.classList.add('event-card');
-    eventCard.id = event.id;
+    eventCard.id = `card-${event.id}`;
 
     const eventName = document.createElement('h3');
     eventName.textContent = event.name;
