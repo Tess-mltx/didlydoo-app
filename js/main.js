@@ -8,3 +8,4 @@ import './modules/getSingleEvent.js';
 import './modules/upDateEvent.js';
 import './modules/deleteSingleEvent.js';
 import './utils/randomColor.js';
+import './modules/addPossibleDate.js';
