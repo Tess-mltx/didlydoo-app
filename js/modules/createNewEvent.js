@@ -15,7 +15,7 @@ submitNewEvent.addEventListener('click', () => {
 
       });
       console.log(datesArray);
-    // postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
+    postNewEvent(); // <=== remetre l'appel quand on sauras en suprimer.
 
 });
 
