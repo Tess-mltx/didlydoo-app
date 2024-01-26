@@ -1,53 +1,75 @@
-# Name project
-Le projet Didlydoo-App vise à créer une application web permettant aux utilisateurs de planifier des événements avec leurs amis et proches.
-## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-### General Info
-***
-L'objectif principal est de se concentrer sur le développement du frontend, en utilisant une API backend existante. Les principales fonctionnalités incluent l'affichage des événements, la création d'événements, l'ajout de disponibilités aux événements, l'édition et la suppression d'événements.
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+# Didlydoo App
+
+Didlydoo App est une application web conçue pour simplifier la planification d'événements entre amis et proches. Avec Didlydoo, les utilisateurs peuvent afficher, créer, éditer et supprimer des événements tout en gérant la disponibilité de chaque participant. Didlydoo identifie automatiquement les dates optimales pour maximiser la participation à votre événement.
+
+### Capture d'écran
+![Didlydoo App Screenshot](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
+
 ## Technologies
-***
-A list of technologies used within the project:
-* [npm](https://example.com): Version 12.3 
-* [node](https://example.com): Version 2.34
-* [vite](https://example.com): Version 1234
-* [SASS](https://example.com): Version 1234
+
+* **HTML, CSS/SASS, JavaScript :** Structure, présentation et comportement interactif.
+* **Vite :** Bundler pour regrouper et optimiser les fichiers JS et CSS.
+* **Node.js (avec Express.js) :** Création du serveur web pour gérer les requêtes HTTP.
+* **Fetch API :** Réalisation des requêtes HTTP depuis le navigateur vers le serveur.
+* **RESTful API :** Facilite la communication entre le front-end et le back-end.
+* **MongoDB avec Mongoose :** Base de données pour stocker et récupérer les données liées aux événements et aux participants.
+* **Git/GitHub :** Système de contrôle de version pour la gestion collaborative du code.
+* **Parcel, Babel :** Regroupement et transpilation du code JS et CSS.
+* **FontAwesome :** Intégration d'icônes dans l'interface utilisateur.
+* **date-fns :** Utilisé pour manipuler les dates de manière efficace.
+
+## Fonctionnalités
+* **Affichage d'Événements :** Permet aux utilisateurs de consulter tous les événements existants avec la disponibilité de chaque participant.
+
+* **Création d'Événements :** Autorise les utilisateurs à créer de nouveaux événements en fournissant des détails tels que le nom, les dates possibles, l'auteur et la description.
+
+* **Gestion de Disponibilité :** Permet aux participants de définir leur disponibilité pour chaque date proposée lors de la création ou de la modification de leur participation à un événement existant.
+
+* **Édition d'Événements :** Permet aux utilisateurs de modifier le nom, la description et l'auteur d'un événement existant.
+
+* **Suppression d'Événements :** Offre la possibilité de supprimer un événement existant.
 
 ## Installation
-***
-A little intro about the installation. 
-```
-$ git clone https://example.com
-$ cd ../path/to/the/file
-$ npm install
-$ npm start
-```
-Side information: To use the application in a special environment use ```lorem ipsum``` to start
-## Collaboration
-***
-Give instructions on how to collaborate with your project.
-> Maybe you want to write a quote in this part. 
-> It should go over several rows?
-> This is how you do it.
-## FAQs
-***
-A list of frequently asked questions
-1. **This is a question in bold**
-Answer of the first question with _italic words_. 
-2. __Second question in bold__ 
-To answer this question we use an unordered list:
-* First point
-* Second Point
-* Third point
-3. **Third question in bold**
-Answer of the third question with *italic words*.
-4. **Fourth question in bold**
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
+Clonez le repository.
+
+Dans votre terminal :
+   > git clone [backend_repository_url]
+
+**Backend**
+Allez dans le répertoire backend, et installez les dépendances.
+   > cd backend
+   > npm install
+
+Démarrez le serveur pour gérer les requêtes HTTP.
+   > node server/index.mjs
+Note : Gardez le terminal ouvert pour maintenir le serveur en cours d'exécution.
+
+**Front-End (Vite)**
+Ouvrez un terminal, allez dans le répertoire frontend, et installez les dépendances.
+   > cd frontend
+   > npm install
+
+Démarrez le serveur de développement Vite.
+   > npm run dev
+
+Ouvrez votre navigateur web et accédez à l'URL de développement local fournie (généralement http://localhost:5173/).
+
+Maintenant, vous êtes prêt à explorer et à utiliser l'application Didlydoo sur votre machine locale.
+
+## Comment utiliser 
+1. Consultez la liste des événements avec les disponibilités de chaque participant.
+
+2. Créez de nouveaux événements en fournissant les détails nécessaires.
+
+3. Gérez la disponibilité en modifiant votre participation à un événement existant.
+
+4. Modifiez le nom, la description ou l'auteur d'un événement existant si nécessaire.
+
+5. Supprimez les événements qui ne sont plus pertinents.
+
+6. Inscrivez-vous à un événement et choisissez les dates où vous êtes disponible.
+
+## Auteurs
+Stacy Maloteaux et Alice Marique
+
+
