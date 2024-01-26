@@ -1,4 +1,10 @@
 // Toggle dark mode
+.headerPage {
+    &-navContainer {
+        @include flex-center;
+    }
+}
+
 .headerPage-navContainer-darkModeInput {
     opacity: 0;
     position: absolute;

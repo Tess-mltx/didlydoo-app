@@ -1,2 +1,21 @@
 //Style commun à tous les éléments
 
+html.partyMode, body.partyMode {
+    background-color: hsl(230, 40%, 10%);
+    color: hsl(230, 100%, 90%);
+    & .headerPage{
+        background-color: hsl(230, 40%, 10%);
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+}
+
+input:required:invalid,
+    textarea:required:invalid {
+      border: 2px solid $error-border-color;
+    }
+  

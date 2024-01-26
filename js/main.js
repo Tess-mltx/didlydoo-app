@@ -1,16 +1,12 @@
 // Import modules
-import './modules/_toggleDarkMode.js'
+import './modules/formNewEvent.js';
+import './modules/createNewEvent.js';
+import './modules/displayEvent.js';
 
-// functions generate random
-function randomColorLight() {
-    let h = (Math.floor(Math.random()*(360))); 
-      let colorLight = ("hsl(" + h + "100%, 95%)");
-      return(colorLight)
-}
-
-function rand10() {
-    let min = Math.ceil(1);
-    let max = Math.floor(10);
-
-    alert (Math.floor(Math.random()*(max-min) + min));
-}
+import './utils/getTheID.js';
+import './modules/getSingleEvent.js';
+import './modules/upDateEvent.js';
+import './modules/deleteSingleEvent.js';
+import './utils/randomColor.js';
+import './modules/addPossibleDate.js';
+import './modules/toggleDarkMode.js';

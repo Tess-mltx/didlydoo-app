@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Single Event </title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <script type="module" defer src="js/mainEvent.js"></script>
+    <!-- Appel de script pour la font d'icone fontawesome -->
+    <script src="https://kit.fontawesome.com/f0baf4ae6a.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+</head>
+
+<body>
+
+    <header class="headerPage">
+        <button onclick="location.href = '/'">Back</button>
+        <h1 class="headerPage-title">
+            <!-- insert event name via js -->
+        </h1>
+        <p class="headerPage-desc"></p>
+    </header>
+    <main class="mainPage">
+        <section id="eventDetails">
+            <!-- Le tableau de dates sera ajouté ici -->
+        </section>
+        <section class="addNewDatesEvent">
+            <h2>Ajouter des dates pour l'event</h2>
+            <form id="addDateForm">
+                <div class="footerForm">
+                    <div class="sectionDate" id="addDatesInputs">
+                        <input class="form_date" type="date" required>
+                    </div>
+                    <button class="form_btnAdd" type="button" id="addDateBtn">+</button>
+                </div>
+                <button class="form_btnSubmit" type="submit" id="btnSubmitDate">+</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footerPage">
+
+    </footer>
+</body>
