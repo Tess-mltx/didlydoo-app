@@ -15,7 +15,8 @@
 <body class="bodyPage">
     <header class="headerPage">
         <div class="headerPage-navContainer">
-            <a href="#" class="headerPage-logoAccueil"><img class="headerPage-logoAccueil-img" src="img/becode-logo.png" alt="logo du cofeeShop"></a>
+            <a href="#" class="headerPage-logoAccueil"><img class="headerPage-logoAccueil-img" src="img/becode-logo.png"
+                    alt="logo du cofeeShop"></a>
             <h1>The didlydoo-app</h1>
             <input type="checkbox" class="headerPage-navContainer-darkModeInput" id="toggleDarkMode">
             <label for="toggleDarkMode" class="headerPage-navContainer-darkModeLabel">
@@ -25,18 +26,26 @@
             </label>
         </div>
         <form class="createEventForm">
-            <input type="text" maxlength="100"  id="nameEvent" placeholder="Entrez le nom de votre evenement..." required  >
-            <input type="text" maxlength="30"  id="author" placeholder="Entrez votre nom..." required>
-            <textarea id="desc" maxlength="256"  placeholder="Description: " required></textarea>
-            <div id="datesInputs">
-                <input class="" type = "date" required>
-            <button type="button" id="addDateBtn">+</button>
+            <div class="headerForm">
+                <input class="form_name" type="text" maxlength="100" id="nameEvent"
+                    placeholder="Entrez le nom de votre evenement..." required>
+                <input class="form_author" type="text" maxlength="30" id="author" placeholder="Entrez votre nom..."
+                    required>
             </div>
-            <button type="button" id="submitEvent">Validation</button>
+            <div>
+                <textarea class="form_desc" id="desc" maxlength="256" placeholder="Description: " required></textarea>
+            </div>
+            <div class="footerForm">
+                <div class="sectionDate" id="datesInputs">
+                    <input class="form_date" type="date" required>
+                </div>
+                <button class="form_btnAdd" type="button" id="addDateBtn">+</button>
+            </div>
+            <button class="form_btnSubmit" type="button" id="submitEvent">Validation</button>
         </form>
     </header>
     <main class="mainPage">
-        
+
     </main>
     <footer>
 

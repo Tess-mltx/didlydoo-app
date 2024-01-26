@@ -1,93 +1,25 @@
-// Variables de couleur mauve inversées
-$primary-color: #e1bee7;  // violet accentué (inverse du violet primaire)
-$accent-color: #9c27b0;   // violet primaire (inverse du violet accentué)
-$background-color: #f5f5f5;
-$text-color: #333;
-$border-color: #ddd;
-$button-bg-color: #9c27b0;
-$button-text-color: #fff;
-$error-border-color: red;
-$outline-color: #CC00CC;
-
-// Mixins
-@import './utils/mixins';
-
-// Attention à l'ordre des imports (ex : ne pas mettre un fichier qui a besoin des variables avant l'import de celles-ci)
 @import './vendors/reset';
 @import './utils/variables';
-@import './components/toggleDarkMode';
+@import './utils/mixins';
 @import './base/base';
+@import './components/header';
+@import './components/formIndex';
+@import './components/cards';
+@import './components/toggleDarkMode';
 
-// Styles généraux
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: $background-color;
-  color: $text-color;
-  input:required:invalid, textarea:required:invalid {
-    border: 2px solid $error-border-color;
-  }
-}
-
-button {
-  @include buttonStyles;
-  @include littleBox;
-}
-
-input, textarea {
-  @include littleBox;
-}
-
-header {
-  background-color: $primary-color;
-  color: $button-text-color;
-  padding: 15px;
-
-}
-
-// Styles pour le formulaire de création d'événement
-.createEventForm {
-  max-width: 400px;
-  margin: 0 auto;
-
-
-
-  #datesInputs {
-    display: flex;
-    align-items: center;
-
-    input {
-      flex: 1;
-    }
-  }
-}
 
 // Styles pour les cartes d'événements
-.event-card {
-  background-color: #fff;
-  border: 1px solid $border-color;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 10px 0;
-
-  h3 {
-    color: $primary-color;
-  }
-
-  p {
-    color: $text-color;
-  }
-
-  .participate-button, .btnDelete, .btnEdit, #createEvent, #seeEvent, #submitEvent {
-    @include buttonStyles;
-  };
-  & button {
-
-  }
-}
 
 .mainPage {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
+
+
+// ARRAY EVENT.HTML | NE PAS MODIFIER !
 
 #eventDetails {
   margin-top: 20px;
@@ -97,13 +29,15 @@ header {
   width: 100%;
   border-collapse: collapse;
 
-  th, td {
+  th,
+  td {
     border: 1px solid $border-color;
     text-align: center;
     padding: 10px;
   }
 
-  th:first-child, td:first-child {
+  th:first-child,
+  td:first-child {
     border-right: none;
   }
 
@@ -124,3 +58,4 @@ header {
   }
 
 }
+// FIN ARRAY 

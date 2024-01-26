@@ -66,18 +66,53 @@
   },
   {
     "id": "c86573c0370f",
-    "name": "new event",
+    "name": "edit espere reload",
     "author": "tess",
-    "description": "Descrje met une desciption :",
+    "description": "edit desc",
     "dates": [
       "2024-01-25",
       "2024-01-26",
       "2024-01-27"
     ],
     "created_at": "2024-01-24T21:24:54.447Z",
-    "num_modification": 0,
-    "last_modification": "2024-01-24T21:24:54.447Z",
-    "attendees": []
+    "num_modification": 2,
+    "last_modification": "2024-01-26T12:43:40.739Z",
+    "attendees": [
+      {
+        "name": "alice",
+        "dates": [
+          {
+            "date": "2024-01-25",
+            "available": true
+          },
+          {
+            "date": "2024-01-26",
+            "available": true
+          },
+          {
+            "date": "2024-01-27",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "tess",
+        "dates": [
+          {
+            "date": "2024-01-25",
+            "available": true
+          },
+          {
+            "date": "2024-01-26",
+            "available": true
+          },
+          {
+            "date": "2024-01-27",
+            "available": true
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "208296ff0f24",
@@ -182,6 +217,31 @@
           {
             "date": "2022-02-10",
             "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": false
+          },
+          {
+            "date": "2022-03-12",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "jerem",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": false
           },
           {
             "date": "2022-03-10",

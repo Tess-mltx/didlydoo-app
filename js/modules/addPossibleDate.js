@@ -1,27 +1,29 @@
 // sur event.html, ajouter un bouton "ajouter des disponnibilité" ou similaire
 // import uniquement dans mainEvent.js
 // add un form pour les input date ?
+import { eventId } from "../mainEvent";
+const sectionAddDate = document.querySelector('addNewDatesEvent');
+const datesForm = document.getElementById('addDateForm'); // <=== là ou seront les input ???
+const btnSubmitDate = document.querySelector('#btnSubmitDate');
 
-// const datesForm = document.getElementById('dateForm'); // <=== là ou seront les input ???
-// const btnSubmitDate = document.querySelector('#btnSubmitDate');
-let datesArray = ['2024-02-14', '2024-02-15'];
+let datesArray = [];
 
 // Changer de place l'eventListener ; je devrais en faire une function
+btnSubmitDate.addEventListener('click', e => {
+    e.preventDefault();
 
-// btnSubmitDate.addEventListener('click', () => {
+    const datesInput = datesForm.querySelectorAll('input[type="date"]');
 
-//     const datesInput = datesForm.querySelectorAll('input[type="date"]');
+    datesInput.forEach(input => {
+        let date = input.value;
+        datesArray.push(date);
 
-//     datesInput.forEach(input => {
-//         let date = input.value;
-//         datesArray.push(date);
+    });
+    console.log(datesArray);
 
-//     });
-//     console.log(datesArray);
-
-//     addDateToEvent(eventId) // modifier l'argument apres au besoins;
-
-// });
+    addDateToEvent(eventId) // modifier l'argument apres au besoins;
+    location.reload(eventId);
+});
 
 
 async function addDateToEvent(eventId) {
@@ -41,4 +43,3 @@ async function addDateToEvent(eventId) {
 
 
 }
-// addDateToEvent('8df5c688c8ca');

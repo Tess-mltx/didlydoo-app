@@ -8,7 +8,7 @@ let interval;
 function changeColor(cards) {
 
     if (!interval) {
-        interval = setInterval(partyOn, 1000, cards);
+        interval = setInterval(partyOn, 500, cards);
     }
 }
 

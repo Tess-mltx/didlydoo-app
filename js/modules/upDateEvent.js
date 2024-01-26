@@ -22,6 +22,7 @@ async function editWorkflow(eventId) {
     let btnSubmit = document.querySelector('.editEventForm-btnSubmit');
     btnSubmit.addEventListener('click', async function () {
         editEvent(eventId)
+        // location.reload();
     })
 }
 

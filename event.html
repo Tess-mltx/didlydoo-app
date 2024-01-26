@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/f0baf4ae6a.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
 </head>
+
 <body>
 
     <header class="headerPage">
@@ -24,10 +25,19 @@
     <main class="mainPage">
         <section id="eventDetails">
             <!-- Le tableau de dates sera ajouté ici -->
-          </section>
-          <div>
-            <button type="button" id="btnAddDate">Ajouter dates</button>
-          </div>
+        </section>
+        <section class="addNewDatesEvent">
+            <h2>Ajouter des dates pour l'event</h2>
+            <form id="addDateForm">
+                <div class="footerForm">
+                    <div class="sectionDate" id="addDatesInputs">
+                        <input class="form_date" type="date" required>
+                    </div>
+                    <button class="form_btnAdd" type="button" id="addDateBtn">+</button>
+                </div>
+                <button class="form_btnSubmit" type="submit" id="btnSubmitDate">+</button>
+            </form>
+        </section>
     </main>
     <footer class="footerPage">
 

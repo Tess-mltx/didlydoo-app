@@ -1,7 +1,10 @@
 import { getSingleEvent } from "./modules/getSingleEvent.js";
 import { showDateTable } from './modules/choiceuser.js';
+// import './modules/addPossibleDate.js';
+// import './utils/getTheID.js';
+// import './modules/getSingleEvent.js';
 
-const eventId = new URLSearchParams(window.location.search).get('id');
+export const eventId = new URLSearchParams(window.location.search).get('id');
 const title = document.querySelector('.headerPage-title');
 const desc = document.querySelector('.headerPage-desc');
 const eventDetailsSection = document.getElementById('eventDetails');
