@@ -1,6 +1,6 @@
 // vite.config.js
 export default {
-  base: '/votre-repo/',
+  base: '/didlydoo-app/',
   build: {
     outDir: 'dist',
   },
