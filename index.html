@@ -12,8 +12,17 @@
     <script src="https://kit.fontawesome.com/f0baf4ae6a.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
+<body class="bodyPage">
+    <header class="headerPage">
+        <div class="headerPage-navContainer">
+            <a href="#" class="headerPage-logoAccueil"><img class="headerPage-logoAccueil-img" src="img/becode-logo.png" alt="logo du cofeeShop"></a>
+            <input type="checkbox" class="headerPage-navContainer-darkModeInput" id="toggleDarkMode">
+            <label for="toggleDarkMode" class="headerPage-navContainer-darkModeLabel">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="headerPage-navContainer-darkModeLabel-ball"></span>
+            </label>
+        </div>
         <form class="createEventForm">
             <input type="text" maxlength="100"  id="nameEvent" placeholder="Entrez le nom de votre evenement..." required  >
             <input type="text" maxlength="30"  id="author" placeholder="Entrez votre nom..." required>
@@ -25,7 +34,7 @@
             <button type="button" id="submitEvent">Validation</button>
         </form>
     </header>
-    <main>
+    <main class="mainPage">
         
     </main>
     <footer>

@@ -9,3 +9,4 @@ import './modules/upDateEvent.js';
 import './modules/deleteSingleEvent.js';
 import './utils/randomColor.js';
 import './modules/addPossibleDate.js';
+import './modules/toggleDarkMode.js';
