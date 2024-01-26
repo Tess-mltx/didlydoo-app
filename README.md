@@ -9,12 +9,10 @@ Didlydoo App est une application web conçue pour simplifier la planification d'
 
 * **HTML, CSS/SASS, JavaScript :** Structure, présentation et comportement interactif.
 * **Vite :** Bundler pour regrouper et optimiser les fichiers JS et CSS.
-* **Node.js (avec Express.js) :** Création du serveur web pour gérer les requêtes HTTP.
+* **Node.js (avec Express.js) :** Initialisation du serveur web pour gérer les requêtes HTTP.
 * **Fetch API :** Réalisation des requêtes HTTP depuis le navigateur vers le serveur.
 * **RESTful API :** Facilite la communication entre le front-end et le back-end.
-* **MongoDB avec Mongoose :** Base de données pour stocker et récupérer les données liées aux événements et aux participants.
 * **Git/GitHub :** Système de contrôle de version pour la gestion collaborative du code.
-* **Parcel, Babel :** Regroupement et transpilation du code JS et CSS.
 * **FontAwesome :** Intégration d'icônes dans l'interface utilisateur.
 * **date-fns :** Utilisé pour manipuler les dates de manière efficace.
 
@@ -35,7 +33,7 @@ Clonez le repository.
 Dans votre terminal :
    > git clone [backend_repository_url]
 
-**Backend**
+### Backend
 Allez dans le répertoire backend, et installez les dépendances.
    > cd backend
    > npm install
@@ -44,7 +42,7 @@ Démarrez le serveur pour gérer les requêtes HTTP.
    > node server/index.mjs
 Note : Gardez le terminal ouvert pour maintenir le serveur en cours d'exécution.
 
-**Front-End (Vite)**
+### Front-End (Vite)
 Ouvrez un terminal, allez dans le répertoire frontend, et installez les dépendances.
    > cd frontend
    > npm install
@@ -52,9 +50,26 @@ Ouvrez un terminal, allez dans le répertoire frontend, et installez les dépend
 Démarrez le serveur de développement Vite.
    > npm run dev
 
+Note : Gardez le terminal ouvert pour maintenir le serveur en cours d'exécution.
+
 Ouvrez votre navigateur web et accédez à l'URL de développement local fournie (généralement http://localhost:5173/).
 
 Maintenant, vous êtes prêt à explorer et à utiliser l'application Didlydoo sur votre machine locale.
+
+### Endpoint documentation
+
+| Method | Endpoint                   | Body                                                                                          | Response                                                                                                                                  |
+| ------ | -------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | /api/events/               |                                                                                               | A list of all the events                                                                                                                  |
+| GET    | /api/events/[id]           |                                                                                               | A single event                                                                                                                            |
+| GET    | /api/attendees/            |                                                                                               | Get a list of all the attendees, and the events they're attending                                                                         |
+| GET    | /api/attendees/[name]      |                                                                                               | Get all attendances for a given name                                                                                                      |
+| POST   | /api/events/               | `{ name: string, dates: array of dates ['YYYY-MM-DD'], author: string, description: string }` | Creates an event with `dates` as possibilities. You must provide an author, a name and a description for the event                        |
+| PATCH  | /api/events/[id]/          | `{ name: string (optional), author: string (optional), description: string (optional) }`      | Patches (edit) an event with the provided infos                                                                                           |
+| DELETE | /api/events/[id]/          |                                                                                               | Deletes an event                                                                                                                          |
+| POST   | /api/events/[id]/add_dates | `{ dates: array of dates ['YYYY-MM-DD'] }`                                                    | Add some possible dates to an event                                                                                                       |
+| POST   | /api/events/[id]/attend    | `{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }`  | Add an attendance for the given event. You must provide the attendee's `name` and some availabilities, in the form of an array of object  |
+| PATCH  | /api/events/[id]/attend    | `{ name: string, dates : [ { date: date 'YYYY-MM-DD', available: boolean (true/false) } ] }`  | Edit an attendance for the given event. You must provide the attendee's `name` and some availabilities, in the form of an array of object |
 
 ## Comment utiliser 
 1. Consultez la liste des événements avec les disponibilités de chaque participant.
